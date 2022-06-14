@@ -1,4 +1,4 @@
-![svg-pan-zoom logo](http://ariutta.github.io/svg-pan-zoom/svg-pan-zoom-logo.png)
+![svg-pan-zoom logo](http://bumbu.github.io/svg-pan-zoom/svg-pan-zoom-logo.png)
 
 svg-pan-zoom library
 ==========================
@@ -10,14 +10,14 @@ Simple pan/zoom solution for SVGs in HTML. It adds events listeners for mouse sc
 
 It works cross-browser and supports both inline SVGs and SVGs in HTML `object` or `embed` elements.
 
-> If you're looking for version 2.3.x you can find it in [v2.3.x branch](https://github.com/ariutta/svg-pan-zoom/tree/v2.3.x)
+> If you're looking for version 2.3.x you can find it in [v2.3.x branch](https://github.com/mkubdev/svg-pan-zoom/tree/v2.3.x)
 
 Support
 -------
 
 ### Bugs and Issues
 
-If you found a bug or have a suggestion first check if there is a similar [open](https://github.com/ariutta/svg-pan-zoom/issues) or [closed](https://github.com/ariutta/svg-pan-zoom/issues?q=is%3Aissue+is%3Aclosed) issue. If there are none then create a new one.
+If you found a bug or have a suggestion first check if there is a similar [open](https://github.com/mkubdev/svg-pan-zoom/issues) or [closed](https://github.com/ariutta/svg-pan-zoom/issues?q=is%3Aissue+is%3Aclosed) issue. If there are none then create a new one.
 
 When opening a new issue **please provide a reproducible example**:
 - Share it so we can get directly to the problem. You can use [this starter jsfiddle setup](http://jsfiddle.net/bumbu/167usffr/) to provide your example. Or upload your own [jsfiddle.net](http://jsfiddle.net) (or any other live) example.
