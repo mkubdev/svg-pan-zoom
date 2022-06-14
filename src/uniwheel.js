@@ -9,27 +9,9 @@ module.exports = (function(){
   var prefix = "", _addEventListener, _removeEventListener, support, fns = [];
   var passiveOption = {passive: true};
 
-  // detect event model
-  if ( window.addEventListener ) {
-    _addEventListener = "addEventListener";
-    _removeEventListener = "removeEventListener";
-  } else {
-    _addEventListener = "attachEvent";
-    _removeEventListener = "detachEvent";
-    prefix = "on";
-  }
-
-  // detect available wheel event
-  support = "onwheel" in document.createElement("div") ? "wheel" : // Modern browsers support "wheel"
-            document.onmousewheel !== undefined ? "mousewheel" : // Webkit and IE support at least "mousewheel"
-            "DOMMouseScroll"; // let's assume that remaining browsers are older Firefox
-
-
   function createCallback(element,callback) {
 
     var fn = function(originalEvent) {
-
-      !originalEvent && ( originalEvent = window.event );
 
       // create a normalized event object
       var event = {
