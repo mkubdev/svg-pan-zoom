@@ -2,10 +2,6 @@ var Utils = require("./utilities"),
   _browser = "unknown";
 
 // http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
-if (/*@cc_on!@*/ false || !!document.documentMode) {
-  // internet explorer
-  _browser = "ie";
-}
 
 module.exports = {
   svgNS: "http://www.w3.org/2000/svg",
@@ -68,7 +64,7 @@ module.exports = {
     if (!viewport) {
       var viewportId =
         "viewport-" + new Date().toISOString().replace(/\D/g, "");
-      viewport = document.createElementNS(this.svgNS, "g");
+      viewport = document ? document.createElementNS(this.svgNS, "g") : null;
       viewport.setAttribute("id", viewportId);
 
       // Internet Explorer (all versions?) can't use childNodes, but other browsers prefer (require?) using childNodes
@@ -183,16 +179,7 @@ module.exports = {
     // IE has a bug that makes markers disappear on zoom (when the matrix "a" and/or "d" elements change)
     // see http://stackoverflow.com/questions/17654578/svg-marker-does-not-work-in-ie9-10
     // and http://srndolha.wordpress.com/2013/11/25/svg-line-markers-may-disappear-in-internet-explorer-11/
-    if (_browser === "ie" && !!defs) {
-      // this refresh is intended for redisplaying the SVG during zooming
-      defs.parentNode.insertBefore(defs, defs);
-      // this refresh is intended for redisplaying the other SVGs on a page when panning a given SVG
-      // it is also needed for the given SVG itself, on zoomEnd, if the SVG contains any markers that
-      // are located under any other element(s).
-      window.setTimeout(function() {
-        that.refreshDefsGlobal();
-      }, that.internetExplorerRedisplayInterval);
-    }
+    // We don't need to handle it, IE is dead!
   },
 
   /**
