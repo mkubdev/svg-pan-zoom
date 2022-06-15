@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "UMD",
+    "moduleResolution": "node",
     "target": "es5",
     "diagnostics": true,
     "noEmit": true,
@@ -9,13 +10,8 @@
     "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
-    "typeRoots": [
-      "./"
-    ],
+    "typeRoots": ["./"],
     "types": []
   },
-  "files": [
-    "dist/svg-pan-zoom.d.ts",
-    "tests/test_typescript.ts"
-  ]
+  "files": ["dist/svg-pan-zoom.d.ts", "tests/test_typescript.ts"]
 }

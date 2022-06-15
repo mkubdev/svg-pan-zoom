@@ -29,7 +29,7 @@ function isFixed(file) {
 function compile() {
   return browserify({ entries: "./src/stand-alone.js" })
     .bundle()
-    .on("error", function(err) {
+    .on("error", function (err) {
       console.log(err.toString());
       this.emit("end");
     })
@@ -68,13 +68,14 @@ function check() {
         "!./dist/**/*.js",
         "!./demo/**/*.js",
         "!./tests/assets/**/*.js",
-        "!./src/uniwheel.js" // Ignore uniwheel
+        "!./src/uniwheel.js", // Ignore uniwheel
+        "!./node_modules/**", // Ignore node_modules
       ])
       // NOTE: this runs prettier via eslint-plugin-prettier
       .pipe(
         eslint({
           configFile: "./.eslintrc.json",
-          fix: true
+          fix: true,
         })
       )
       .pipe(eslint.format())
