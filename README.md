@@ -87,6 +87,31 @@ Pan and zoom the SVG tiger on github pages:
 
 ## How To Use
 
+* Use with React/Next.js :
+
+Import the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.js) from your javascript file. Then call the init method:
+
+```js
+import React, { useEffect, useRef, Fragment } from 'react';
+import svgPanZoom from 'svg-pan-zoom/src/svg-pan-zoom.js';
+const MyComponent = () => {
+  const svgElement = useRef(null)
+  useEffect(() => {
+    let panZoomStar = svgPanZoom(svgElement);
+  });
+  
+  return (
+    <Fragment>
+      <svg ref={star} height="210" width="500">
+        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+      </svg>
+    </Fragment>
+  );
+}
+```
+
+* Use with Vanilla.js :
+
 Reference the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js) from your HTML document. Then call the init method:
 
 ```js
