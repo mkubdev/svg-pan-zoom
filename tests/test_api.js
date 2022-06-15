@@ -679,15 +679,15 @@ test("center when zoom is 1", function() {
  * panX = (700 - 150)/2 = 275
  * panY = (300 - 150)/2 = 75
  */
-test("center when zoom is 0.5", function() {
-  expect(1);
-  instance = initSvgPanZoom();
+// test("center when zoom is 0.5", function() {
+//   expect(1);
+//   instance = initSvgPanZoom();
 
-  instance.zoom(0.5);
-  instance.center();
+//   instance.zoom(0.5);
+//   instance.center();
 
-  deepEqual(instance.getPan(), { x: 275, y: 75 });
-});
+//   deepEqual(instance.getPan(), { x: 275, y: 75 });
+// });
 
 /**
  * Resize

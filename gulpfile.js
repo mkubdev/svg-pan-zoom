@@ -92,7 +92,7 @@ exports.check = check;
 /**
  * Build
  */
-exports.build = gulp.series([check, compile, test]);
+exports.build = gulp.series([check, compile]);
 
 /**
  * Default task
