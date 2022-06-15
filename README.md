@@ -3,7 +3,7 @@
 svg-pan-zoom library
 ==========================
 
-Simple pan/zoom solution for SVGs in HTML. It adds events listeners for mouse scroll, double-click and pan, plus it optionally offers:
+Simple pan/zoom solution for SVGs in HTML/SPAs. It adds double-click and pan, plus it optionally offers:
 * JavaScript API for control of pan and zoom behavior
 * onPan and onZoom event handlers
 * On-screen zoom controls
@@ -76,6 +76,33 @@ Pan and zoom the SVG tiger on github pages:
 
 How To Use
 ----------
+
+* Use with React/Next.js :
+
+Import the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.js) from your javascript file. Then call the init method:
+
+```js
+import React, { useEffect, useRef, Fragment } from 'react';
+import svgPanZoom from 'svg-pan-zoom/src/svg-pan-zoom.js';
+
+const MyComponent = () => {
+  const svgElement = useRef(null)
+
+  useEffect(() => {
+    let panZoomStar = svgPanZoom(svgElement);
+  });
+  
+  return (
+    <Fragment>
+      <svg ref={star} height="210" width="500">
+        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+      </svg>
+    </Fragment>
+  );
+}
+```
+
+* Use with Vanilla.js :
 
 Reference the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js) from your HTML document. Then call the init method:
 
@@ -517,7 +544,6 @@ Supported Browsers
 * Firefox
 * Safari
 * Opera
-* Internet Explorer 9+ _(works badly if viewBox attribute is set)_
 
 CDN
 ---
@@ -529,6 +555,7 @@ For more usage examples check (jsdelivr usage)[https://github.com/jsdelivr/jsdel
 
 Related Work
 ------------
+This library is a fork of [Bumbu's svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) which allows its use in a react/nextjs project. I removed the mousescroll eventListener to make it work. 
 This library used the [SVGPan](https://github.com/aleofreddi/svgpan) library as a starting point. SVGPan is intended for use with the [SVG 'script' element](http://www.w3.org/TR/SVG/script.html), whereas svg-pan-zoom is intended for use with the [HTML 'script' element](http://www.w3.org/TR/html401/interact/scripts.html).
 
 Wrapper Libraries (feel free to add to this -- pull requests welcome!)
