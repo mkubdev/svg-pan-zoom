@@ -1,5 +1,9 @@
 ![svg-pan-zoom logo](http://bumbu.github.io/svg-pan-zoom/svg-pan-zoom-logo.png)
 
+# 🚧 WIP: React/Next.js wrapper package
+
+This fork is currently under-development to build a react/next.js wrapper package to run this awesome lib. PR Welcome!
+
 # svg-pan-zoom library
 
 Simple pan/zoom solution for SVGs in HTML/SPAs. It adds double-click and pan, plus it optionally offers:
