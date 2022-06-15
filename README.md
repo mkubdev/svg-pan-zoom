@@ -1,12 +1,8 @@
-![svg-pan-zoom logo](http://bumbu.github.io/svg-pan-zoom/svg-pan-zoom-logo.png)
-
-# 🚧 WIP: React/Next.js wrapper package
-
-This fork is currently under-development to build a react/next.js wrapper package to run this awesome lib. PR Welcome!
+![svg-pan-zoom logo](http://ariutta.github.io/svg-pan-zoom/svg-pan-zoom-logo.png)
 
 # svg-pan-zoom library
 
-Simple pan/zoom solution for SVGs in HTML/SPAs. It adds double-click and pan, plus it optionally offers:
+Simple pan/zoom solution for SVGs in HTML. It adds events listeners for mouse scroll, double-click and pan, plus it optionally offers:
 
 - JavaScript API for control of pan and zoom behavior
 - onPan and onZoom event handlers
@@ -14,13 +10,13 @@ Simple pan/zoom solution for SVGs in HTML/SPAs. It adds double-click and pan, pl
 
 It works cross-browser and supports both inline SVGs and SVGs in HTML `object` or `embed` elements.
 
-> If you're looking for version 2.3.x you can find it in [v2.3.x branch](https://github.com/mkubdev/svg-pan-zoom/tree/v2.3.x)
+> If you're looking for version 2.3.x you can find it in [v2.3.x branch](https://github.com/ariutta/svg-pan-zoom/tree/v2.3.x)
 
 ## Support
 
 ### Bugs and Issues
 
-If you found a bug or have a suggestion first check if there is a similar [open](https://github.com/mkubdev/svg-pan-zoom/issues) or [closed](https://github.com/ariutta/svg-pan-zoom/issues?q=is%3Aissue+is%3Aclosed) issue. If there are none then create a new one.
+If you found a bug or have a suggestion first check if there is a similar [open](https://github.com/ariutta/svg-pan-zoom/issues) or [closed](https://github.com/ariutta/svg-pan-zoom/issues?q=is%3Aissue+is%3Aclosed) issue. If there are none then create a new one.
 
 When opening a new issue **please provide a reproducible example**:
 
@@ -81,36 +77,6 @@ Pan and zoom the SVG tiger on github pages:
 - [Thumbnail Viewer](http://bumbu.github.io/svg-pan-zoom/demo/thumbnailViewer.html)
 
 ## How To Use
-
-- Use with React/Next.js :
-
-Import the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.js) from your javascript file. Then call the init method:
-
-```js
-import React, { useEffect, useRef, Fragment } from "react";
-import svgPanZoom from "svg-pan-zoom/src/svg-pan-zoom.js";
-
-const MyComponent = () => {
-  const svgElement = useRef(null);
-
-  useEffect(() => {
-    let panZoomStar = svgPanZoom(svgElement);
-  });
-
-  return (
-    <Fragment>
-      <svg ref={star} height="210" width="500">
-        <polygon
-          points="100,10 40,198 190,78 10,78 160,198"
-          style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"
-        />
-      </svg>
-    </Fragment>
-  );
-};
-```
-
-- Use with Vanilla.js :
 
 Reference the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js) from your HTML document. Then call the init method:
 
@@ -567,6 +533,7 @@ Check [dymanic-load demo](http://ariutta.github.io/svg-pan-zoom/demo/dynamic-loa
 - Firefox
 - Safari
 - Opera
+- Internet Explorer 9+ _(works badly if viewBox attribute is set)_
 
 ## CDN
 
@@ -578,7 +545,6 @@ For more usage examples check (jsdelivr usage)[https://github.com/jsdelivr/jsdel
 
 ## Related Work
 
-This library is a fork of [Bumbu's svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) which allows its use in a react/nextjs project. I removed the mousescroll eventListener to make it work.
 This library used the [SVGPan](https://github.com/aleofreddi/svgpan) library as a starting point. SVGPan is intended for use with the [SVG 'script' element](http://www.w3.org/TR/SVG/script.html), whereas svg-pan-zoom is intended for use with the [HTML 'script' element](http://www.w3.org/TR/html401/interact/scripts.html).
 
 Wrapper Libraries (feel free to add to this -- pull requests welcome!)
