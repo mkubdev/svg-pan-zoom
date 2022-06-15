@@ -1,4 +1,13 @@
-![svg-pan-zoom logo](http://ariutta.github.io/svg-pan-zoom/svg-pan-zoom-logo.png)
+This library was forked from [bumbu/svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) for the purpose to make it work with React/Vue/Next.js framework.
+
+The following changes have been made from the original:
+
+- Add support pan and zoom with multi-touch.
+- Export type definitions in typescript.
+- Do not access `window` and `document` when exporting the module.
+- Specify `{passive: false}` explicitly to the event listeners to prevent warnings.
+
+![svg-pan-zoom logo](./svg-pan-zoom-logo.png)
 
 # svg-pan-zoom library
 
