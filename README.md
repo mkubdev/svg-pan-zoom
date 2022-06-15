@@ -108,36 +108,6 @@ const MyComponent = () => {
 
 - Use with Vanilla.js :
 
-* Use with React/Next.js :
-
-Import the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.js) from your javascript file. Then call the init method:
-
-```js
-import React, { useEffect, useRef, Fragment } from "react";
-import svgPanZoom from "svg-pan-zoom/src/svg-pan-zoom.js";
-
-const MyComponent = () => {
-  const svgElement = useRef(null);
-
-  useEffect(() => {
-    let panZoomStar = svgPanZoom(svgElement);
-  });
-
-  return (
-    <Fragment>
-      <svg ref={star} height="210" width="500">
-        <polygon
-          points="100,10 40,198 190,78 10,78 160,198"
-          style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"
-        />
-      </svg>
-    </Fragment>
-  );
-};
-```
-
-- Use with Vanilla.js :
-
 Reference the [svg-pan-zoom.js file](http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js) from your HTML document. Then call the init method:
 
 ```js
@@ -587,16 +557,6 @@ You have to ensure that the SVG is loaded and available in DOM before initializi
 
 Check [dymanic-load demo](http://ariutta.github.io/svg-pan-zoom/demo/dynamic-load.html).
 
-<<<<<<< Updated upstream
-Supported Browsers
-
----
-
-- Chrome
-- Firefox
-- Safari
-- # Opera
-
 ## Supported Browsers
 
 - Chrome
@@ -606,27 +566,16 @@ Supported Browsers
 
 ## CDN
 
-> > > > > > > Stashed changes
-
 You can use (jsdelivr)[http://www.jsdelivr.com/] as a CDN. It supports automatic pulling from NPM and GitHub.
 
 For example use `https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.5.0/dist/svg-pan-zoom.min.js` to load version `3.5.0`.
 
 For more usage examples check (jsdelivr usage)[https://github.com/jsdelivr/jsdelivr#usage].
 
-<<<<<<< Updated upstream
-Related Work
-
----
-
-# This library is a fork of [Bumbu's svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) which allows its use in a react/nextjs project. I removed the mousescroll eventListener to make it work.
-
 ## Related Work
 
 This library is a fork of [Bumbu's svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) which allows its use in a react/nextjs project. I removed the mousescroll eventListener to make it work.
-
-> > > > > > > Stashed changes
-> > > > > > > This library used the [SVGPan](https://github.com/aleofreddi/svgpan) library as a starting point. SVGPan is intended for use with the [SVG 'script' element](http://www.w3.org/TR/SVG/script.html), whereas svg-pan-zoom is intended for use with the [HTML 'script' element](http://www.w3.org/TR/html401/interact/scripts.html).
+This library used the [SVGPan](https://github.com/aleofreddi/svgpan) library as a starting point. SVGPan is intended for use with the [SVG 'script' element](http://www.w3.org/TR/SVG/script.html), whereas svg-pan-zoom is intended for use with the [HTML 'script' element](http://www.w3.org/TR/html401/interact/scripts.html).
 
 Wrapper Libraries (feel free to add to this -- pull requests welcome!)
 
